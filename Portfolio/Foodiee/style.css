@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* variables */
+:root {
+    --primary-color: #a82c48;
+    --secondary-color: #43121d;
+    --third-color: #f98169;
+    --white-color: #fff;
+    --text-color: #555;
+    --text-grey: #999;
+    --black-color: #000;
+    --primary-font: 'roboto', sans-serif;
+    --secondary-font: 'Quicksand', sans-serif;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 100%;
+    font-weight: 400;
+}
+
+:active,
+:hover,
+:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+/* a,
+a:hover{
+    text-decoration: none;
+}
+
+a:hover{
+    color:var(--primary-color);
+} */
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* customized scroll bar */
+
+::-webkit-scrollbar {
+    width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+
+/* 
+================================
+       Custom css design
+================================
+ */
+
+
+h1 {
+    font-size: 3rem !important;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: var(--secondary-color) !important;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2.25rem !important;
+    text-transform: capitalize;
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+    line-height: 3rem;
+}
+
+h4 {
+    color: var(--secondary-color) !important;
+    font-family: var(--secondary-font);
+    text-transform: capitalize;
+    font-size: 18px !important; 
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+h5 {
+    color: var(--primary-color);
+    text-transform: capitalize;
+    font-family: var(--secondary-color);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+}
+
+
+/* header */
+
+/* navbar */
+.navigation-wrap {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transform: all 1s ease-out;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    transition: all .15s ease-in-out;
+}
+
+.navigation-wrap.scroll-on {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white-color);
+    box-sizing: 0 0.125rem 1.75rem 0 rgb(0, 0, 0, 0, 0.9);
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+nav a>img {
+    height: 60px;
+    width: auto;
+}
+
+nav ul li>a.color {
+    color: var(--primary-color);
+    font: size 15pt;
+    font-weight: 500;
+    transition: all 0.2s ease-in;
+}
+
+nav ul li>a.color1 {
+    color: var(--bs-primary) !important;
+    font: size 15pt;
+    font-weight: 500;
+}
+
+nav ul li>a.color:hover {
+    color: var(--bs-primary);
+}
+
+nav ul button.border_custom {
+    background: var(--primary-color);
+    border: none;
+    height: fit-content;
+    width: fit-content;
+    padding: 2px;
+    transition: all 0.3s ease-in;
+}
+
+nav ul button>a.color {
+    color: var(--white-color);
+    font-weight: 20px;
+}
+
+nav ul button.border_custom:hover {
+    border: solid 1px var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+nav ul button>a.color:hover {
+    color: var(--primary-color);
+}
+
+
+
+/* home */
+#home button.custom_btn1 {
+    font-size: 0.937rem;
+    font-weight: 600;
+    padding: 0.625rem 1.875rem;
+    line-height: 25px;
+    text-transform: capitalize;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.custom_btn1 {
+    font-size: 0.937rem;
+    font-weight: 600;
+    padding: 0.625rem 1.875rem;
+    line-height: 25px;
+    border: none;
+    text-transform: capitalize;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+#home button.custom_btn2 {
+    padding: 0.625rem 1.875rem;
+    line-height: 25px;
+    background-color: var(--white-color);
+    border: 0.1875rem solid var(--white-color);
+    color: var(--text-color);
+    font-size: 0.937rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 0px 2px 10px 1px rgb(0 0 0 /19%);
+    transition: all .4s ease-out 0s;
+}
+
+#home button.custom_btn2:hover {
+    color: var(--primary-color);
+    border: solid 1px var(--primary-color)
+}
+
+.top-banner {
+    width: 100%;
+    background: url("./images/bg/bg-1.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10.875rem 0 9.375rem;
+
+}
+
+.counter-section {
+    background: var(--primary-color);
+    padding: 1rem 0;
+    text-align: middle;
+}
+
+.counter-section p {
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+
+/* about */
+
+.about-section {
+    background-color: var(--white-color);
+}
+
+.about-section .card,
+.about-section .card img {
+    border-radius: 0.625rem;
+}
+
+.about-section .text-sec {
+    padding-left: 2rem;
+}
+
+/* food type section design */
+.foot-type {
+    padding-top: 3.25rem;
+}
+
+.food-type ul li {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 32px;
+    position: relative;
+    margin-left: 30px;
+}
+
+.food-type ul li::before {
+    content: '\f00c';
+    position: absolute;
+    left: -2.1rem;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-family: "font Awsome 5 free";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+/* story */
+
+.story-section {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px;
+    width: 100%;
+    height: 28.25rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("./images/bg/bg-2.jpg");
+    width: 100%;
+    height: 28.25rem;
+    display:flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.text-content {
+    text-align: center;
+    color: var(--primary-color)
+}
+
+.story-section h2 {
+    color: var(--primary-color)
+}
+
+
+
+/* explore */
+
+.explore-food .card{
+    border:none;
+    background-color: transparent;
+    border-radius:0.9rem;
+}
+
+.explore-food .card img{
+    border-radius: 0.9rem;
+    object-fit:cover;
+}
+
+.explore-food .card span{
+    display: block;
+    font-size: 1.5rem;
+    font-weight:700;
+    color:var(--primary-color);
+    padding-bottom: 1rem;
+    border-bottom:0.0625rem solid #eee;
+}
+
+.explore-food .card span del{
+    color:var(--text-grey);
+    margin-left:0.5rem;
+    text-decoration: line-through;
+}
+
+
+.faq h4 span{
+    color:var(--primary-color);
+    font-size:1.8rem;
+    margin-right:0.3rem;
+
+}
+
+/* book-food */
+.book-food{
+    color:var(--white-color);
+    width:100%;
+    background:url(./images/bg/bg-3.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:0.7rem;
+    padding:4.3rem 0;
+}
+
+/* newsletter */
+.newsletter{
+    width:60%;
+    margin: 0 auto;
+}
+
+.newsletter .form-control{
+    height:3.3rem;
+    padding:0.125rem;
+    font-size: 0.8rem;
+    width:100%;
+    background: transparent;
+    border: 0.18rem solid var(--text-color);
+    font-weight: 700;
+    border-radius:none;
+}
+
+.newsletter .form-control:hover,
+.newsletter .form-control:focus{
+    outline:none;
+    box-shadow: none;
+    border-color:var(--primary-color);
+}
+
+.newsletter{
+    width:75%;
+}
+
+.newsletter .custom_btn1{
+    width:100%;
+    margin-top:10px;
+}
+
+
+/* footer */
+.footer{
+    background-color: var(--primary-color);
+    margin-top: 70px;
+}
+
+.footer .footer-link{
+    font-size: 1rem;
+    color:var(--white-color);
+    padding:0 1.87rem;
+    text-decoration: none;
+}
+
+.footer .footer-link:hover{
+    color:var(--bs-primary)  !important;
+}
+
+.footer a i{
+   font-size: 1.5rem;
+   color:var(--white-color) !important;
+   padding:0 1rem;
+}
